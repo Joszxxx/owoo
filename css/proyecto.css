@@ -1,100 +1,158 @@
+/* Variables de Estilo */
 :root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --accent: #38bdf8;
-    --text: #f1f5f9;
-    --nav-h: 60px;
+    --primary: #5865f2;
+    --bg-dark: #0a0b0d;
+    --card-bg: #16171d;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --btn-green: #2ecc71;
+    --btn-gray: #3a3c43;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html { scroll-behavior: smooth; }
-body { 
-    background: var(--bg); 
-    color: var(--text); 
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    display: flex;
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
 }
 
-/* SIDEBAR (Computadora) */
-.sidebar {
-    width: 240px;
-    height: 100vh;
-    background: #020617;
+/* NAVBAR PROFESIONAL */
+.navbar {
+    background: rgba(10, 11, 13, 0.95);
+    padding: 1rem;
     position: fixed;
-    left: 0; top: 0;
-    padding: 30px;
-    display: block; /* Se oculta en móvil */
-}
-.logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 40px; }
-.sidebar nav a { 
-    display: block; color: #94a3b8; text-decoration: none; 
-    padding: 12px 0; border-bottom: 1px solid #1e293b; transition: 0.3s;
-}
-.sidebar nav a:hover { color: var(--accent); padding-left: 10px; }
-
-/* BOTTOM NAV (Móvil) */
-.mobile-nav {
-    display: none; /* Se activa en móvil */
-    position: fixed;
-    bottom: 0; left: 0; width: 100%;
-    background: #1e293b;
-    border-top: 1px solid #334155;
-    justify-content: space-around;
-    padding: 10px 0;
-    z-index: 1000;
-}
-.mobile-nav a { color: var(--text); text-decoration: none; font-size: 0.8rem; font-weight: bold; }
-
-/* CONTENIDO PRINCIPAL */
-.content {
-    margin-left: 240px; /* Margen para sidebar */
-    padding: 40px;
     width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2d2f36;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { color: var(--primary); font-weight: 800; text-decoration: none; font-size: 1.2rem; }
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 120px 20px 60px;
+    background: linear-gradient(to bottom, #1a1c23, #0a0b0d);
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero p { color: var(--text-muted); }
+
+/* CONTENEDOR Y TARJETAS */
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .card {
-    background: var(--card);
-    padding: 30px;
-    border-radius: 16px;
-    margin-bottom: 40px;
-    max-width: 800px;
-    border: 1px solid rgba(255,255,255,0.05);
+    background: var(--card-bg);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: 1px solid #2d2f36;
 }
 
-.tag { color: var(--accent); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
-h2 { margin: 10px 0 20px; font-size: 1.8rem; }
-p { color: #94a3b8; margin-bottom: 20px; text-align: left; }
+.card-content { padding: 25px; text-align: left; }
 
-/* VIDEOS */
-.video-box {
-    position: relative; padding-bottom: 56.25%; height: 0;
-    border-radius: 12px; overflow: hidden; background: #000;
-}
-.video-box iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
+.step { color: var(--primary); font-size: 0.75rem; font-weight: bold; }
 
-/* BOTONES */
-.btn-next, .btn-top {
-    display: inline-block;
-    background: var(--accent);
-    color: #020617;
-    padding: 12px 24px;
+h2 { margin: 10px 0; font-size: 1.5rem; }
+
+p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+
+/* VIDEO ADAPTATIVO */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #000;
     border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+}
+
+/* BOTONES MEJORADOS */
+.button-group { display: flex; gap: 10px; }
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    display: inline-block;
 }
 
-/* TABLA RESPONSIVA */
-.table-container { overflow-x: auto; margin-top: 20px; }
-table { width: 100%; border-collapse: collapse; min-width: 500px; }
-th { background: #334155; padding: 15px; text-align: left; color: var(--accent); }
-td { padding: 15px; border-bottom: 1px solid #334155; }
+.btn-next { background: var(--btn-green); color: #fff; flex: 1; text-align: center; }
+.btn-back { background: var(--btn-gray); color: #fff; }
+.btn-top { background: var(--primary); color: #fff; display: block; text-align: center; }
 
-/* RESPONSIVE (CELULAR) */
-@media (max-width: 768px) {
-    .sidebar { display: none; }
-    .mobile-nav { display: flex; }
-    .content { margin-left: 0; padding: 20px 20px 80px 20px; }
-    h1 { font-size: 1.8rem; }
-    .card { padding: 20px; }
+/* TABLA QUE NO SE ROMPE */
+.table-wrapper { overflow-x: auto; margin-top: 15px; }
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+.styled-table th {
+    background: #1f2128;
+    color: var(--primary);
+    text-align: left;
+    padding: 12px;
+    font-size: 0.8rem;
+}
+
+.styled-table td {
+    padding: 12px;
+    border-bottom: 1px solid #2d2f36;
+    font-size: 0.9rem;
+}
+
+.footer {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* AJUSTES PARA CELULAR (MÓVIL) */
+@media (max-width: 600px) {
+    .nav-links { display: none; } /* Ocultar links arriba en móvil para limpiar */
+    .hero h1 { font-size: 1.8rem; }
+    .card-content { padding: 15px; }
+    .btn { font-size: 0.8rem; }
 }
