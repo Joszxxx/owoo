@@ -3,84 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathHub Pro v3</title>
+    <title>MathMatrix Pro - 2026</title>
     <link rel="stylesheet" href="css/proyecto.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="logo">Σ MathHub</a>
-            <div class="nav-links">
-                <a href="#t1">Aritmética</a>
-                <a href="#t2">Álgebra</a>
-                <a href="#datos">Datos</a>
-            </div>
-        </div>
+    <aside class="sidebar-pc">
+        <div class="logo">Σ MATH_HUB</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#t1">Aritmética</a>
+            <a href="#t2">Álgebra</a>
+            <a href="#t3">Geometría</a>
+            <a href="#t4">Trigonometría</a>
+            <a href="#t5">Cálculo</a>
+            <a href="#datos">Simbología</a>
+        </nav>
+    </aside>
+
+    <nav class="mobile-nav">
+        <a href="#t1">Arit</a>
+        <a href="#t2">Álg</a>
+        <a href="#t3">Geo</a>
+        <a href="#t4">Trig</a>
+        <a href="#t5">Calc</a>
     </nav>
 
-    <header id="inicio" class="hero">
-        <h1>Universo Matemático</h1>
-        <p>Plataforma de aprendizaje avanzado 2026</p>
-    </header>
+    <main class="main-content">
+        <header id="inicio" class="hero-section">
+            <h1>Universo Matemático</h1>
+            <p>Plataforma de aprendizaje avanzado optimizada para 2026.</p>
+        </header>
 
-    <main class="wrapper">
-        <section id="t1" class="card">
-            <div class="card-content">
-                <span class="step">01. FUNDAMENTOS</span>
-                <h2>Aritmética Fundamental</h2>
-                <p>La aritmética es la base fundamental. No se limita a cálculos básicos; estudia la naturaleza de los números y sus interacciones. Esencial para la administración financiera y la lógica diaria.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/CxRpE7unOxs" allowfullscreen></iframe>
-                </div>
-                <div class="button-group">
-                    <a href="#t2" class="btn btn-next">Siguiente Tema →</a>
-                </div>
+        <article class="topic-card" id="t1">
+            <span class="badge">Módulo 01</span>
+            <h2>Aritmética Fundamental</h2>
+            <p>La aritmética es la base fundamental. No se limita a cálculos básicos; estudia la naturaleza de los números y sus interacciones. Esencial para la administración financiera y la lógica diaria. Dominar sus reglas permite resolver problemas cotidianos con precisión quirúrgica.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/CxRpE7unOxs" frameborder="0" allowfullscreen></iframe>
             </div>
+            <div class="nav-btns">
+                <a href="#t2" class="btn btn-next">Siguiente: Álgebra →</a>
+            </div>
+        </article>
+
+        <article class="topic-card" id="t2">
+            <span class="badge">Módulo 02</span>
+            <h2>Álgebra y Lógica</h2>
+            <p>El lenguaje simbólico de las ciencias. El álgebra permite formular leyes generales mediante variables, permitiendo modelar situaciones reales en ingeniería y economía. Es el puente entre lo concreto y lo abstracto en el pensamiento humano.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/4LouAWcajJs" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="nav-btns">
+                <a href="#t1" class="btn btn-prev">← Anterior</a>
+                <a href="#t3" class="btn btn-next">Siguiente: Geometría →</a>
+            </div>
+        </article>
+
+        <article class="topic-card" id="t3">
+            <span class="badge">Módulo 03</span>
+            <h2>Geometría Espacial</h2>
+            <p>El estudio de las formas y el espacio. Entrena el pensamiento lógico y la visualización espacial, capacidades críticas para la arquitectura y el diseño. Nos enseña cómo se estructuran los objetos en nuestro entorno tridimensional.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/7DKiEb2UIfU" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="nav-btns">
+                <a href="#t2" class="btn btn-prev">← Anterior</a>
+                <a href="#t4" class="btn btn-next">Siguiente: Trigonometría →</a>
+            </div>
+        </article>
+
+        <article class="topic-card" id="t4">
+            <span class="badge">Módulo 04</span>
+            <h2>Trigonometría Circular</h2>
+            <p>Relaciones triangulares y fenómenos periódicos. Clave para describir ondas sonoras, luz y señales de radio. Indispensable en astronomía y electrónica para entender el comportamiento de las ondas en el universo.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/swMkyzvn-Bw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="nav-btns">
+                <a href="#t3" class="btn btn-prev">← Anterior</a>
+                <a href="#t5" class="btn btn-next">Siguiente: Cálculo →</a>
+            </div>
+        </article>
+
+        <article class="topic-card" id="t5">
+            <span class="badge">Módulo 05</span>
+            <h2>Cálculo Infinitesimal</h2>
+            <p>Análisis de la variación continua. Mediante derivadas e integrales, el cálculo modela sistemas dinámicos y es la base de la física moderna. Permite entender cómo cambian las cosas en cada instante infinitesimal.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Ll_qHUG6OWs" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="nav-btns">
+                <a href="#t4" class="btn btn-prev">← Anterior</a>
+                <a href="#datos" class="btn btn-next">Ver Simbología ↓</a>
+            </div>
+        </article>
+
+        <section class="topic-card" id="datos">
+            <h2>Resumen de Operaciones</h2>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ÁREA</th>
+                            <th>SÍMBOLOS</th>
+                            <th>APLICACIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Aritmética</td><td>±, ×, ÷</td><td>Básica</td></tr>
+                        <tr><td>Álgebra</td><td>x, y, √</td><td>Ecuaciones</td></tr>
+                        <tr><td>Geometría</td><td>π, r², θ</td><td>Espacio</td></tr>
+                        <tr><td>Cálculo</td><td>∫, Δ, dx</td><td>Cambio</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="#inicio" class="btn btn-top">↑ Volver al Inicio</a>
         </section>
 
-        <section id="t2" class="card">
-            <div class="card-content">
-                <span class="step">02. LÓGICA</span>
-                <h2>Álgebra y Símbolos</h2>
-                <p>El lenguaje simbólico de las ciencias. El álgebra permite formular leyes generales mediante variables, permitiendo modelar situaciones reales en ingeniería y economía.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/4LouAWcajJs" allowfullscreen></iframe>
-                </div>
-                <div class="button-group">
-                    <a href="#t1" class="btn btn-back">← Volver</a>
-                    <a href="#datos" class="btn btn-next">Ver Simbología</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="datos" class="card">
-            <div class="card-content">
-                <h2>Tabla de Operaciones</h2>
-                <div class="table-wrapper">
-                    <table class="styled-table">
-                        <thead>
-                            <tr>
-                                <th>Módulo</th>
-                                <th>Simbología</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Aritmética</td><td>+ - × ÷</td><td>Operar</td></tr>
-                            <tr><td>Álgebra</td><td>x² √ y</td><td>Resolver</td></tr>
-                            <tr><td>Cálculo</td><td>∫ Δ dx</td><td>Analizar</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <a href="#inicio" class="btn btn-top">↑ Ir al Inicio</a>
-            </div>
-        </section>
+        <footer class="footer">
+            <p>© 2026 MathMatrix Pro | Educación Digital sin Límites</p>
+        </footer>
     </main>
-
-    <footer class="footer">
-        <p>© 2026 MathHub Pro | Educación Digital</p>
-    </footer>
 
 </body>
 </html>
