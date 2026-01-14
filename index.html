@@ -8,104 +8,73 @@
 </head>
 <body>
 
-<header id="inicio">
-    <div class="header-content">
-        <h1>MATH_MATRIX v2</h1>
-        <p>Plataforma de Aprendizaje • Ciclo 2026</p>
-    </div>
-</header>
+    <aside class="sidebar">
+        <div class="logo">Σ MATH_PRO</div>
+        <nav>
+            <a href="#inicio">Dashboard</a>
+            <a href="#t1">Aritmética</a>
+            <a href="#t2">Álgebra</a>
+            <a href="#t3">Geometría</a>
+            <a href="#t4">Trigonometría</a>
+            <a href="#t5">Cálculo</a>
+            <a href="#datos">Simbología</a>
+        </nav>
+    </aside>
 
-<main>
-    <section class="tema" id="t1">
-        <span class="label">MÓDULO 01</span>
-        <h2>Aritmética Fundamental</h2>
-        <p>La aritmética es la base sobre la cual se construye todo el edificio de las matemáticas. No se limita solo a realizar cálculos básicos; se trata de comprender la naturaleza de los números, sus propiedades y las reglas que rigen sus interacciones. Dominar la aritmética permite desarrollar agilidad mental y es esencial para la resolución de problemas en la vida cotidiana.</p>
+    <nav class="mobile-nav">
+        <a href="#t1">Arit</a>
+        <a href="#t2">Álg</a>
+        <a href="#t3">Geo</a>
+        <a href="#t4">Trig</a>
+        <a href="#t5">Cálc</a>
+        <a href="#datos">Data</a>
+    </nav>
+
+    <main class="content">
+        <header id="inicio">
+            <h1>Universo Matemático</h1>
+            <p>Plataforma de aprendizaje optimizada 2026</p>
+        </header>
+
+        <section id="t1" class="card">
+            <span class="tag">Tema 01</span>
+            <h2>Aritmética: El Lenguaje Base</h2>
+            <p>La aritmética es la base fundamental. No se limita a cálculos básicos; estudia la naturaleza de los números y sus interacciones. Esencial para la administración financiera y la lógica diaria.</p>
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/CxRpE7unOxs" allowfullscreen></iframe>
+            </div>
+            <div class="actions">
+                <a href="#t2" class="btn-next">Siguiente Tema →</a>
+            </div>
+        </section>
+
+        <section id="datos" class="card">
+            <h2>Centro de Simbología</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Área</th>
+                            <th>Símbolo</th>
+                            <th>Función</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Aritmética</td><td>+ - × ÷</td><td>Cálculo Base</td></tr>
+                        <tr><td>Álgebra</td><td>x, y, √</td><td>Ecuaciones</td></tr>
+                        <tr><td>Geometría</td><td>π, r², A</td><td>Espacio</td></tr>
+                        <tr><td>Trigonometría</td><td>sen, cos</td><td>Ondas</td></tr>
+                        <tr><td>Cálculo</td><td>∫, Δ, dx</td><td>Cambio</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="#inicio" class="btn-top">Volver al Inicio</a>
+        </section>
         
-        <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/CxRpE7unOxs" allowfullscreen></iframe>
-        </div>
-
-        <div class="nav-links">
-            <a href="#t2" class="btn btn-sig">SIGUIENTE: ÁLGEBRA →</a>
-        </div>
-    </section>
-
-    <section class="tema" id="t2">
-        <span class="label">MÓDULO 02</span>
-        <h2>Álgebra y Símbolos</h2>
-        <p>El álgebra representa un salto cualitativo en el razonamiento matemático, ya que introduce el uso de símbolos y letras para representar cantidades variables o desconocidas. Al crear este lenguaje simbólico, el álgebra permite formular leyes generales y resolver ecuaciones que serían imposibles de abordar solo con números.</p>
-        
-        <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/4LouAWcajJs" allowfullscreen></iframe>
-        </div>
-
-        <div class="nav-links">
-            <a href="#t3" class="btn btn-sig">SIGUIENTE: GEOMETRÍA →</a>
-        </div>
-    </section>
-
-    <section class="tema" id="t3">
-        <span class="label">MÓDULO 03</span>
-        <h2>Geometría Espacial</h2>
-        <p>Estudio de las propiedades y relaciones de los puntos, líneas, planos y figuras en el espacio. A través de ella aprendemos a cuantificar el entorno físico, calculando áreas y volúmenes de estructuras complejas. Entrena el pensamiento lógico y la visualización espacial.</p>
-        
-        <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/7DKiEb2UIfU" allowfullscreen></iframe>
-        </div>
-
-        <div class="nav-links">
-            <a href="#t4" class="btn btn-sig">SIGUIENTE: TRIGONOMETRÍA →</a>
-        </div>
-    </section>
-
-    <section class="tema" id="t4">
-        <span class="label">MÓDULO 04</span>
-        <h2>Trigonometría</h2>
-        <p>Se especializa en el estudio de las relaciones entre los ángulos y los lados de los triángulos. Al extender estas relaciones a funciones circulares, se convierte en la herramienta clave para describir cualquier fenómeno que se repita de forma periódica, como las ondas sonoras o la luz.</p>
-        
-        <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/swMkyzvn-Bw" allowfullscreen></iframe>
-        </div>
-
-        <div class="nav-links">
-            <a href="#t5" class="btn btn-sig">SIGUIENTE: CÁLCULO →</a>
-        </div>
-    </section>
-
-    <section class="tema" id="t5">
-        <span class="label">MÓDULO 05</span>
-        <h2>Cálculo Diferencial</h2>
-        <p>El cálculo estudia el cambio dinámico y el movimiento. Mediante el uso de límites, derivadas e integrales, nos permite analizar cómo varían las funciones en instantes infinitesimales. Es la base de la física clásica y cuántica.</p>
-        
-        <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/Ll_qHUG6OWs" allowfullscreen></iframe>
-        </div>
-
-        <div class="nav-links">
-            <a href="#datos" class="btn btn-sig">VER TABLA DE DATOS ↓</a>
-        </div>
-    </section>
-
-    <section class="tema" id="datos">
-        <h2>_RESUMEN_DE_OPERACIONES</h2>
-        <div class="table-container">
-            <table class="tabla">
-                <tr><td>ARITMÉTICA</td><td>Suma, Resta, Mult, Div</td></tr>
-                <tr><td>ÁLGEBRA</td><td>Variables (x, y), Ecuaciones</td></tr>
-                <tr><td>GEOMETRÍA</td><td>Áreas, Volúmenes (π, r²)</td></tr>
-                <tr><td>TRIGONOMETRÍA</td><td>Seno, Coseno, Ángulos</td></tr>
-                <tr><td>CÁLCULO</td><td>Derivadas e Integrales (∫)</td></tr>
-            </table>
-        </div>
-        <div class="nav-links" style="margin-top: 30px;">
-            <a href="#inicio" class="btn btn-volver">↑ VOLVER AL INICIO</a>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>© 2026 MATH_MATRIX PRO | SISTEMA EDUCATIVO</p>
-</footer>
+        <footer style="padding: 50px 0; opacity: 0.5;">
+            <p>© 2026 Math Matrix | Educación Adaptativa</p>
+        </footer>
+    </main>
 
 </body>
 </html>
