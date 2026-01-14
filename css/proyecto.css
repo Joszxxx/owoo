@@ -1,79 +1,138 @@
-/* Estilo Moderno y Adaptable */
-:root {
-    --bg: #0d1117;
-    --card: #161b22;
-    --primary: #58a6ff;
-    --success: #238636;
-    --text: #c9d1d9;
-    --border: #30363d;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',Arial,sans-serif;
+}
+html{
+scroll-behavior:smooth;
+}
+body{
+background-color:#f3f0f7;
+line-height: 1.7;
+color: #2d3436;
+}
+header{
+background-color:#6c5ce7;
+color:white;
+text-align:center;
+padding:60px 20px;
+border-bottom:8px solid #a29bfe;
+}
+nav{
+background-color:#2d3436;
+padding:15px 0;
+position:sticky;
+top:0;
+z-index:100;
+}
+nav ul{
+list-style:none;
+text-align:center;
+}
+nav ul li{
+display:inline;
+margin:0 20px;
+}
+nav ul li a{
+color:#00cec9;
+text-decoration:none;
+font-weight:bold;
+transition: 0.3s;
+}
+nav ul li a:hover{ color: #a29bfe; }
+
+#contenedor-estilizado{
+max-width:900px;
+margin:40px auto;
+background-color:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(108,92,231,0.2);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { 
-    background-color: var(--bg); 
-    color: var(--text); 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+section{
+margin-bottom:60px;
+scroll-margin-top:80px;
 }
 
-/* NAVEGACIÓN SUPERIOR */
-.main-nav {
-    position: fixed; top: 0; width: 100%;
-    background: rgba(22, 27, 34, 0.95);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000; padding: 15px 20px;
+.item-lista{
+background-color:#ffffff;
+border-left:8px solid #6c5ce7;
+padding:35px;
+margin-bottom:50px;
+border-radius:12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-.nav-wrapper { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: 800; color: var(--primary); font-size: 1.2rem; }
-.links a { color: var(--text); text-decoration: none; font-size: 0.8rem; font-weight: bold; margin-left: 10px; padding: 5px 10px; border: 1px solid var(--border); border-radius: 5px; }
 
-/* ENCABEZADO */
-header { padding: 120px 20px 60px; max-width: 1000px; margin: 0 auto; }
-header h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
-header p { color: #8b949e; }
-
-/* CONTENEDOR DE TARJETAS */
-.container { max-width: 800px; margin: 0 auto; padding: 20px; }
-.card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 50px;
+.item-lista h3, h2{
+color:#6c5ce7;
+margin-bottom:15px;
 }
-.category { color: var(--primary); font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
-h2 { margin: 10px 0 20px; color: #fff; font-size: 1.8rem; }
-p { margin-bottom: 25px; color: #8b949e; text-align: left; }
 
-/* VIDEOS RESPONSIVOS */
+.item-lista p {
+text-align: justify;
+margin-bottom: 20px;
+}
+
 .video-container {
-    position: relative; padding-bottom: 56.25%; height: 0;
-    border-radius: 10px; overflow: hidden; background: #000; margin-bottom: 25px;
+position: relative;
+padding-bottom: 56.25%;
+height: 0;
+overflow: hidden;
+margin: 25px 0;
+border-radius: 12px;
+background: #000;
 }
-.video-container iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
 
-/* BOTONES */
-.nav-buttons { display: flex; gap: 10px; }
-.btn {
-    padding: 12px 20px; text-decoration: none; font-weight: bold; 
-    border-radius: 6px; font-size: 0.9rem; transition: 0.3s;
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 0;
 }
-.btn-next { background: var(--success); color: white; flex: 1; text-align: center; }
-.btn-back { background: #30363d; color: white; }
-.btn-top { background: var(--primary); color: white; display: block; text-align: center; margin-top: 20px; }
 
-/* TABLA QUE SE VE BIEN EN MÓVIL */
-.table-scroll { overflow-x: auto; margin-top: 20px; border-radius: 8px; border: 1px solid var(--border); }
-.data-table { width: 100%; border-collapse: collapse; min-width: 500px; }
-.data-table th { background: #1f242c; padding: 15px; text-align: left; color: var(--primary); font-size: 0.8rem; }
-.data-table td { padding: 15px; border-top: 1px solid var(--border); font-size: 0.9rem; }
+.tabla-moderna {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+font-size: 0.95em;
+}
 
-.footer { padding: 60px 20px; text-align: center; color: #484f58; font-size: 0.8rem; }
+.tabla-moderna th {
+background-color: #6c5ce7;
+color: white;
+padding: 15px;
+text-align: left;
+}
 
-/* AJUSTES CELULAR */
-@media (max-width: 600px) {
-    header h1 { font-size: 1.8rem; }
-    .card { padding: 20px; }
-    .links { display: none; } /* Oculta links en nav móvil para no saturar */
+.tabla-moderna td {
+padding: 12px;
+border-bottom: 1px solid #eee;
+}
+
+.tabla-moderna tr:hover {
+background-color: #f1f0ff;
+}
+
+.btn-accion, .btn-link, .btn-volver{
+display:inline-block;
+padding:12px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition: 0.3s;
+}
+.btn-accion{background-color:#6c5ce7; color:white;}
+.btn-link{background-color:#00cec9; color:#2d3436;}
+.btn-volver{background-color:#d63031; color:white;}
+
+footer{
+background-color:#2d3436;
+color:white;
+text-align:center;
+padding:40px 0;
+margin-top: 60px;
 }
