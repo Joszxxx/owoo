@@ -1,158 +1,98 @@
-/* Variables de Estilo */
+/* Configuración Profesional */
 :root {
-    --primary: #5865f2;
-    --bg-dark: #0a0b0d;
-    --card-bg: #16171d;
-    --text-main: #ffffff;
-    --text-muted: #a0a0a0;
-    --btn-green: #2ecc71;
-    --btn-gray: #3a3c43;
+    --bg-dark: #0d1117;
+    --card-dark: #161b22;
+    --primary: #58a6ff;
+    --accent: #238636;
+    --text: #c9d1d9;
+    --border: #30363d;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Inter', -apple-system, sans-serif;
-    line-height: 1.6;
+body { 
+    background-color: var(--bg-dark); 
+    color: var(--text); 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* NAVBAR PROFESIONAL */
-.navbar {
-    background: rgba(10, 11, 13, 0.95);
-    padding: 1rem;
+/* SIDEBAR PC */
+.sidebar-pc {
+    width: 250px;
+    height: 100vh;
+    background: #010409;
     position: fixed;
-    width: 100%;
-    top: 0;
+    left: 0; top: 0;
+    padding: 30px;
+    border-right: 1px solid var(--border);
+}
+.sidebar-pc .logo { font-weight: 800; color: var(--primary); margin-bottom: 30px; }
+.sidebar-pc nav a { 
+    display: block; color: var(--text); text-decoration: none; 
+    padding: 12px 0; border-bottom: 1px solid var(--border); transition: 0.3s;
+}
+.sidebar-pc nav a:hover { color: var(--primary); transform: translateX(5px); }
+
+/* MOBILE NAV (Se activa en móvil) */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    background: var(--card-dark);
+    justify-content: space-around;
+    padding: 15px;
+    border-top: 1px solid var(--border);
     z-index: 1000;
-    border-bottom: 1px solid #2d2f36;
 }
+.mobile-nav a { color: var(--text); text-decoration: none; font-size: 0.8rem; font-weight: bold; }
 
-.nav-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* CONTENIDO PRINCIPAL */
+.main-content { margin-left: 250px; padding: 40px; }
 
-.logo { color: var(--primary); font-weight: 800; text-decoration: none; font-size: 1.2rem; }
+.hero-section { margin-bottom: 50px; text-align: left; }
+.hero-section h1 { font-size: 2.5rem; color: #fff; }
 
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-/* HERO SECTION */
-.hero {
-    padding: 120px 20px 60px;
-    background: linear-gradient(to bottom, #1a1c23, #0a0b0d);
-    text-align: left;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-.hero p { color: var(--text-muted); }
-
-/* CONTENEDOR Y TARJETAS */
-.wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.card {
-    background: var(--card-bg);
+/* TARJETAS */
+.topic-card {
+    background: var(--card-dark);
+    padding: 30px;
     border-radius: 12px;
-    margin-bottom: 30px;
-    overflow: hidden;
-    border: 1px solid #2d2f36;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    max-width: 800px;
 }
+.badge { color: var(--primary); font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+h2 { margin: 10px 0 20px; color: #fff; }
+p { line-height: 1.6; margin-bottom: 25px; color: #8b949e; text-align: left; }
 
-.card-content { padding: 25px; text-align: left; }
-
-.step { color: var(--primary); font-size: 0.75rem; font-weight: bold; }
-
-h2 { margin: 10px 0; font-size: 1.5rem; }
-
-p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
-
-/* VIDEO ADAPTATIVO */
+/* VIDEO */
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    background: #000;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    position: relative; padding-bottom: 56.25%; height: 0;
+    border-radius: 8px; overflow: hidden; background: #000; margin-bottom: 20px;
 }
+.video-container iframe { position: absolute; top:0; left:0; width:100%; height:100%; }
 
-.video-container iframe {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-}
-
-/* BOTONES MEJORADOS */
-.button-group { display: flex; gap: 10px; }
-
+/* BOTONES */
+.nav-btns { display: flex; gap: 10px; }
 .btn {
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    display: inline-block;
+    padding: 12px 20px; border-radius: 6px; text-decoration: none; 
+    font-weight: bold; font-size: 0.9rem; transition: 0.2s;
 }
+.btn-next { background: var(--accent); color: white; flex: 2; text-align: center; }
+.btn-prev { background: #30363d; color: white; }
+.btn-top { background: var(--primary); color: white; display: block; text-align: center; margin-top: 20px; }
 
-.btn-next { background: var(--btn-green); color: #fff; flex: 1; text-align: center; }
-.btn-back { background: var(--btn-gray); color: #fff; }
-.btn-top { background: var(--primary); color: #fff; display: block; text-align: center; }
+/* TABLA */
+.table-scroll { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; min-width: 400px; }
+.data-table th { text-align: left; padding: 15px; background: #0d1117; color: var(--primary); }
+.data-table td { padding: 15px; border-bottom: 1px solid var(--border); }
 
-/* TABLA QUE NO SE ROMPE */
-.table-wrapper { overflow-x: auto; margin-top: 15px; }
-
-.styled-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 400px;
-}
-
-.styled-table th {
-    background: #1f2128;
-    color: var(--primary);
-    text-align: left;
-    padding: 12px;
-    font-size: 0.8rem;
-}
-
-.styled-table td {
-    padding: 12px;
-    border-bottom: 1px solid #2d2f36;
-    font-size: 0.9rem;
-}
-
-.footer {
-    padding: 40px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.8rem;
-}
-
-/* AJUSTES PARA CELULAR (MÓVIL) */
-@media (max-width: 600px) {
-    .nav-links { display: none; } /* Ocultar links arriba en móvil para limpiar */
-    .hero h1 { font-size: 1.8rem; }
-    .card-content { padding: 15px; }
-    .btn { font-size: 0.8rem; }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sidebar-pc { display: none; }
+    .mobile-nav { display: flex; }
+    .main-content { margin-left: 0; padding: 20px 20px 80px 20px; }
+    .hero-section h1 { font-size: 1.8rem; }
+    .topic-card { padding: 20px; }
 }
