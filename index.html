@@ -3,163 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Matrix 2026</title>
-    <style>
-        /* RESET TOTAL PARA QUE NO SE VEA RARO */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        
-        :root {
-            --bg: #0b0e14;
-            --card: #161b22;
-            --accent: #58a6ff;
-            --text: #c9d1d9;
-            --btn-green: #238636;
-        }
-
-        body { background-color: var(--bg); color: var(--text); padding-bottom: 80px; }
-
-        /* HEADER TIPO BANNER */
-        header {
-            background: linear-gradient(135deg, #1f6feb 0%, #111 100%);
-            padding: 40px 20px;
-            text-align: left;
-            border-bottom: 1px solid #30363d;
-        }
-
-        header h1 { font-size: 2rem; color: #fff; margin-bottom: 10px; }
-        header p { color: #8b949e; font-size: 0.9rem; }
-
-        /* MENÚ INFERIOR (ESTILO APP) - SIEMPRE VISIBLE */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0; left: 0; width: 100%;
-            background: #161b22;
-            display: flex;
-            justify-content: space-around;
-            padding: 15px 0;
-            border-top: 1px solid #30363d;
-            z-index: 1000;
-        }
-
-        .bottom-nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .bottom-nav a:hover { color: var(--accent); }
-
-        /* CONTENEDOR DE TARJETAS */
-        .container { padding: 20px; max-width: 600px; margin: 0 auto; }
-
-        .card {
-            background: var(--card);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 30px;
-            border: 1px solid #30363d;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-
-        .card h2 { color: var(--accent); font-size: 1.4rem; margin-bottom: 15px; }
-        .card p { font-size: 0.95rem; line-height: 1.6; color: #8b949e; margin-bottom: 20px; text-align: justify; }
-
-        /* VIDEO RESPONSIVO */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #000;
-        }
-
-        .video-wrapper iframe {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-        }
-
-        /* BOTONES DE ACCIÓN */
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background: var(--btn-green);
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        /* TABLA REDISEÑADA */
-        .table-card { overflow-x: auto; background: #0d1117; border-radius: 8px; border: 1px solid #30363d; }
-        
-        table { width: 100%; border-collapse: collapse; min-width: 300px; }
-        th { background: #161b22; color: var(--accent); text-align: left; padding: 12px; font-size: 0.8rem; }
-        td { padding: 12px; border-top: 1px solid #30363d; font-size: 0.85rem; }
-
-    </style>
+    <title>MathHub Pro v3</title>
+    <link rel="stylesheet" href="css/proyecto.css">
 </head>
 <body>
 
-    <header>
-        <h1>MathHub Pro</h1>
-        <p>Plataforma de aprendizaje optimizada 2026</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">Σ MathHub</a>
+            <div class="nav-links">
+                <a href="#t1">Aritmética</a>
+                <a href="#t2">Álgebra</a>
+                <a href="#datos">Datos</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <h1>Universo Matemático</h1>
+        <p>Plataforma de aprendizaje avanzado 2026</p>
     </header>
 
-    <div class="container">
-        
-        <section class="card" id="t1">
-            <h2>01. Aritmética</h2>
-            <p>La aritmética es la base fundamental. No se limita a cálculos básicos; estudia la naturaleza de los números y sus interacciones. Esencial para la administración financiera y la lógica diaria.</p>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/CxRpE7unOxs" allowfullscreen></iframe>
+    <main class="wrapper">
+        <section id="t1" class="card">
+            <div class="card-content">
+                <span class="step">01. FUNDAMENTOS</span>
+                <h2>Aritmética Fundamental</h2>
+                <p>La aritmética es la base fundamental. No se limita a cálculos básicos; estudia la naturaleza de los números y sus interacciones. Esencial para la administración financiera y la lógica diaria.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/CxRpE7unOxs" allowfullscreen></iframe>
+                </div>
+                <div class="button-group">
+                    <a href="#t2" class="btn btn-next">Siguiente Tema →</a>
+                </div>
             </div>
-            <a href="#t2" class="btn">Siguiente: Álgebra →</a>
         </section>
 
-        <section class="card" id="t2">
-            <h2>02. Álgebra</h2>
-            <p>El lenguaje simbólico de las ciencias. El álgebra permite formular leyes generales mediante variables, modelando situaciones reales en ingeniería y economía.</p>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/4LouAWcajJs" allowfullscreen></iframe>
+        <section id="t2" class="card">
+            <div class="card-content">
+                <span class="step">02. LÓGICA</span>
+                <h2>Álgebra y Símbolos</h2>
+                <p>El lenguaje simbólico de las ciencias. El álgebra permite formular leyes generales mediante variables, permitiendo modelar situaciones reales en ingeniería y economía.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/4LouAWcajJs" allowfullscreen></iframe>
+                </div>
+                <div class="button-group">
+                    <a href="#t1" class="btn btn-back">← Volver</a>
+                    <a href="#datos" class="btn btn-next">Ver Simbología</a>
+                </div>
             </div>
-            <a href="#datos" class="btn">Ver Simbología ↓</a>
         </section>
 
-        <section class="card" id="datos">
-            <h2>Simbología Maestra</h2>
-            <div class="table-card">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ÁREA</th>
-                            <th>CONCEPTO</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Aritmética</td><td>Suma, Resta, Mult, Div</td></tr>
-                        <tr><td>Álgebra</td><td>Variables (x, y)</td></tr>
-                        <tr><td>Geometría</td><td>Áreas y Volúmenes</td></tr>
-                        <tr><td>Cálculo</td><td>Derivadas (∫)</td></tr>
-                    </tbody>
-                </table>
+        <section id="datos" class="card">
+            <div class="card-content">
+                <h2>Tabla de Operaciones</h2>
+                <div class="table-wrapper">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Módulo</th>
+                                <th>Simbología</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Aritmética</td><td>+ - × ÷</td><td>Operar</td></tr>
+                            <tr><td>Álgebra</td><td>x² √ y</td><td>Resolver</td></tr>
+                            <tr><td>Cálculo</td><td>∫ Δ dx</td><td>Analizar</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="#inicio" class="btn btn-top">↑ Ir al Inicio</a>
             </div>
-            <a href="#t1" class="btn" style="background:#30363d;">↑ Volver arriba</a>
         </section>
+    </main>
 
-    </div>
-
-    <nav class="bottom-nav">
-        <a href="#t1"><span>1</span>Arit</a>
-        <a href="#t2"><span>2</span>Álg</a>
-        <a href="#datos"><span>3</span>Data</a>
-    </nav>
+    <footer class="footer">
+        <p>© 2026 MathHub Pro | Educación Digital</p>
+    </footer>
 
 </body>
 </html>
